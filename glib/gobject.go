@@ -294,7 +294,7 @@ func (v *Object) Emit(s string, args ...interface{}) (interface{}, error) {
 	}
 	C.g_signal_emitv(valv, id, C.GQuark(0), ret.native())
 
-	return ret.GoValue()
+	return nil, nil
 }
 
 // HandlerBlock is a wrapper around g_signal_handler_block().
